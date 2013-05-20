@@ -7,6 +7,10 @@
  *  What is in this package:
  *  <li>ConfigClassDemo
  *  <li>ConfigFileDemo
+ *  
+ *  Related Launch Configurations:
+ *  <li>Run_Demo_JavaLogger_With_ConfigFile
+ *  <li>Run_Demo_JavaLogger_With_ConfigClass
  *   
  * @author Ron Kitay
  */
