@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HR-Directives>
+	<PeopleToHire>
+		<Person ID="123" Name="Me"/>
+		<Person ID="456" Name="Some"/>
+		<Person ID="789" Name="One"/>
+	</PeopleToHire>
+	<EmployeesToFire>
+		<Employee ID="123" Name="Me" EmployeeNumber="1"/>
+		<Employee ID="456" Name="Some" EmployeeNumber="2"/>
+		<Employee ID="789" Name="One" EmployeeNumber="3"/>
+	</EmployeesToFire>
+</HR-Directives>
