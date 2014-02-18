@@ -2,6 +2,7 @@ package org.ronkitay.tutorials.jmx.basic.mxbean;
 
 /**
  * MXBean interface - allows to publish non standard objects like {@link SomeInnerInput}
+ * Interface must end with "MXBean" to make it work
  *
  * @author Ron Kitay
  */

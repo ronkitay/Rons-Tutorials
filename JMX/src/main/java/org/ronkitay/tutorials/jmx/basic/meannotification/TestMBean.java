@@ -1,6 +1,7 @@
 package org.ronkitay.tutorials.jmx.basic.meannotification;
 
 /**
+ * Interface must end with "MBean" to make it work
  * @author Ron Kitay
  */
 public interface TestMBean {

@@ -3,6 +3,7 @@ package org.ronkitay.tutorials.jmx.basic.mbean;
 import org.ronkitay.tutorials.jmx.basic.mxbean.SomeInnerInput;
 
 /**
+ * Interface must end with "MBean" to make it work
  * @author Ron Kitay
  */
 public interface TestMBean {
