@@ -8,6 +8,7 @@
 	  %d{yyyy.MM.dd} - Date
 	  %d{HH:mm:ss.SSS} - Time
 	  %t - Thread from which the logging request came
+	  # %X{myGlobalContext} - A global debug context parameter named 'myGlobalContext' located in the MDC
 	  %c - The "Category" - this means the name of the logger
 	  %m - The message
 	  %n - A new line (\n or \r\n depending on platform)
@@ -25,7 +26,7 @@
 		<param name="File" value="${java.io.tmpdir}/PropertiesFileDemo.log" />
 		<param name="Append" value="false" />
 		<layout class="org.apache.log4j.PatternLayout">
-			  <param name="ConversionPattern" value="[%p]; %d{yyyy.MM.dd}; %d{HH:mm:ss.SSS}; [%t]; (%c); %m%n"/>
+			  <param name="ConversionPattern" value="[%p]; %d{yyyy.MM.dd}; %d{HH:mm:ss.SSS}; [%t]; [%X{myGlobalContext}]; (%c); %m%n"/>
 		</layout>
       </appender>
 

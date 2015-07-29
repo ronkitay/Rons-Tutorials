@@ -4,6 +4,8 @@ import java.io.File;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
+import org.apache.log4j.MDC;
+import org.apache.log4j.NDC;
 
 
 public class ConfigFileDemo
@@ -18,13 +20,15 @@ public class ConfigFileDemo
 		System.out.println("Log4j configuration is physically located at <" + getRealPath(log4jConfigPath) + ">");
 		System.out.println("A1 Log file should be written to <" + System.getProperty("java.io.tmpdir") + "ConfigFileDemo.log" +">");
 		System.out.println("A2 Log file should be written to <" + System.getProperty("user.dir") + File.separator + "ConfigFileDemo.DEBUG.log" +">\n");
-		
+
+		MDC.put("myGlobalContext", "some very important context");
 		Logger rootLogger = Logger.getRootLogger();
 		print(rootLogger, true, true, false, false, false, false);
-		
+
 		// demoLogger - not directly defined, it inherits from the org.ronkitay.tutorials.basic.logging.log4j logger
 		Logger demoLogger = Logger.getLogger(ConfigFileDemo.class.getName());
 		print(demoLogger, true, true, true, true, false, false);
+		MDC.remove("myGlobalContext");
 
 		Logger debugLogger = Logger.getLogger(ConfigFileDemo.class.getPackage().getName() + ".debug");
 		print(debugLogger, true, true, true, true, true, false);
