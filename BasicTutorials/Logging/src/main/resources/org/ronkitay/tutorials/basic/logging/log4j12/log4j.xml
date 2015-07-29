@@ -12,6 +12,8 @@
 	  %c - The "Category" - this means the name of the logger
 	  %m - The message
 	  %n - A new line (\n or \r\n depending on platform)
+
+	  Full reference at: https://logging.apache.org/log4j/1.2/apidocs/org/apache/log4j/PatternLayout.html
 	-->
 
 	<!-- Appenders -->
