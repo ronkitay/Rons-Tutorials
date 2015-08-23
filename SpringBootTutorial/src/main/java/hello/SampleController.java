@@ -1,9 +1,12 @@
 package hello;
 
-import org.springframework.boot.*;
-import org.springframework.boot.autoconfigure.*;
-import org.springframework.stereotype.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.boot.SpringApplication;
+import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestHeader;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import javax.servlet.http.HttpServletRequest;
 import java.util.Arrays;
@@ -15,7 +18,11 @@ public class SampleController {
 
     @RequestMapping("/")
     @ResponseBody
-    String home(HttpServletRequest request) {
+    String home(
+            HttpServletRequest request,
+            HttpServletRequest response,
+            @RequestParam(value = "category", required = false) String[] headerWithMultipleValues,
+            @RequestHeader(value = "id", required = false) String headerWithSingleValue) {
 
         final Enumeration<String> headerNames = request.getHeaderNames();
 
