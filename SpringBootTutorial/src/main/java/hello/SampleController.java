@@ -1,9 +1,6 @@
 package hello;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import org.springframework.beans.BeansException;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -11,13 +8,10 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
-import org.springframework.http.converter.HttpMessageNotWritableException;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.WebDataBinder;
 import org.springframework.web.bind.annotation.*;
 
-import javax.servlet.ServletInputStream;
-import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.beans.PropertyEditorSupport;
@@ -25,9 +19,7 @@ import java.io.BufferedWriter;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.io.OutputStreamWriter;
-import java.text.MessageFormat;
-import java.util.Arrays;
-import java.util.Enumeration;
+import java.util.Map;
 import java.util.zip.GZIPOutputStream;
 
 @Controller
@@ -45,6 +37,22 @@ public class SampleController implements ApplicationContextAware {
     @ResponseBody
     String test(HttpServletRequest request){
         return "You requested <" + request.getRequestURI().toString() + "?" + request.getQueryString() + ">" ;
+    }
+
+    @RequestMapping(value = "/test2/**", params = {"someInt", "someString"})
+    @ResponseBody
+    String test2(
+            HttpServletRequest request,
+            @ModelAttribute MyClass myClass,
+            @RequestParam(value= Parameters.KUKU_PARAM) Map<String,String[]> unboundParameters
+            ){
+        StringBuilder sb = new StringBuilder();
+
+        sb.append("myClass is <" + myClass.toString() + ">\n");
+//        sb.append("allRequestParams is <" + allRequestParams.toString() + ">\n");
+//        sb.append("modelMap is <" + modelMap.toString() + ">\n");
+//        sb.append("bindingResult is <" + bindingResult.toString() + ">\n");
+        return  sb.toString();
     }
 
     @RequestMapping(value = "/")
