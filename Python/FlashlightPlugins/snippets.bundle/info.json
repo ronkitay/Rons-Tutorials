@@ -1,0 +1,9 @@
+{
+    "name": "snip",
+    "displayName": "Snippets",
+    "description": "Show Snippets",
+    "examples": ["s hello world", "snip good morning", "s"], 
+    "categories": ["Utilities"],
+    "creator_name": "Ron Kitay",
+    "creator_url": "ronkitay.wordpress.com"
+}

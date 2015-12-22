@@ -1,0 +1,2 @@
+s ~message(Hello, world)
+snip ~message(Good Morning)
