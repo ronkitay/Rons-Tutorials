@@ -39,4 +39,3 @@ crazy[0] = 'Hello'
 print crazy
 print crazy[0]
 print crazy[0][1]
-
