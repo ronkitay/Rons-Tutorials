@@ -1,13 +1,23 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-import math_stuff
+# import math_stuff
 
-print 7 + 5
-print 7 + 5.0
-print
-print 7 - 5
-print 7 - 5.0
-print
+num1 = 7 + 5
+print ("7 + 5 = %d (%s)" % (num1, type(num1)))
+num2 = 7 + 5.0
+print ("7 + 5.0 = %5.7f (%s)" % (num2, type(num2)))
+
+num3 = 7 - 5
+print ("7 - 5 = %d (%s)" % (num3, type(num3)))
+num4 = 7 - 5.0
+print ("7 - 5.0 = %4.2f (%s)" % (num4, type(num4)))
+
+num5 = 7 * 5
+print ("7 * 5 = %d (%s)" % (num5, type(num5)))
+
+num6 = 7 * 5.0
+print ("7 * 5.0 = %9.3f (%s)" % (num6, type(num6)))
+
 print 7 * 5
 print 7 * 5.0
 print

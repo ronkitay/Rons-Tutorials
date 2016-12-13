@@ -1,13 +1,18 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
 
+from rons_tutorial_formatting import *
+
+print_block_separator()
+
 x = 1
 while x < 10:
     print x,
     x += 1
 
-print
-print
+end_block(True)
+
+start_block()
 
 words = ['hello', 'world', 'have', 'a', 'nice', 'day']
 for word in words:
@@ -18,22 +23,24 @@ for word in words:
     else:
         shortened_word = word[:-1]
         print shortened_word.title(),
-print
-print
+end_block(True)
+
+start_block()
 
 for value_in_range in range(12, 98, 3):
     print value_in_range, ',',
 
-print
-print
+end_block(True)
+
+start_block()
 
 the_range = range(1, 10)
 for j in the_range:
     if j > 9:
         print j
         break
-else:
-    print "The range `%s` does not contain anything greater than 9" % the_range
+    else:
+        print "The range `%s` does not contain anything greater than 9" % the_range
 
 
 print
@@ -43,5 +50,4 @@ for j in range(0, 1000, 10):
 
     print j, ',',
 
-
-
+end_block(True)

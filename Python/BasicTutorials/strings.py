@@ -44,7 +44,7 @@ This is another
 example of a multiline string
 this time without messing with the \\n character
 """
-print string10
+print (string10)
 
 
 def show_string_characteristics(the_string):
@@ -68,7 +68,7 @@ show_string_characteristics("TextWithoutNumbers")
 show_string_characteristics("   \t   \t   \t\t\t")
 
 string11 = r"This is a raw string, no need to escape things like \n, \t and illegal stuff like \o,\k and others"
-print string11
+print (string11)
 
 print
 print "Say " + "uncle " * 10 + " 10 times"
@@ -80,7 +80,7 @@ print
 string12 = ('hello'
             ' '
             'world')
-print string12
+print (string12)
 print
 
 string13 = "Very long text"
@@ -89,5 +89,34 @@ print "A part of '%s' is also '%s'" % (string13, string13[5:-2])
 print "A part of '%s' is also '%s'" % (string13, string13[-4:])
 print "A part of '%s' is also '%s'" % (string13, string13[5:])
 print "A part of '%s' is also '%s'" % (string13, string13[5:77]) # Does not produce an out-of-bounds error (forgiving API)
-# print string13[56] # Uncomment to see it produces an error
+# print (string13[56] # Uncomment to see it produces an error
 print
+
+string1 = "abcde"
+print (string1[0])
+print (string1[1])
+print (string1[2])
+print (string1[3])
+print (string1[4])
+print (string1[-1])
+print (string1[-2])
+print (string1[-3])
+print (string1[-4])
+print (string1[-5])
+print (string1[1:2])
+print (string1[1:3])
+print (string1[2:-1])
+print (string1[::2])  # Every 2nd character for some reason ...
+
+print("%d / %d = %10.2f" % (10, 3, 10/3))
+
+print ("abcdefghbcd".find("bc"))
+print ("abcdefghbcd".find("bc", 2))
+
+print ("abcdefghbcd".rfind("bc"))
+
+split = "a,bb,cc c c c,dd".split(",")
+print " <> ".join(split)
+
+print ("len of 'abc xyz' is %d" % len("abc xyz"))
+print ("cmp('abc','xyz') is %d" % cmp("abc", "xyz"))
