@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from AdvancedTutorials.timer_decorator import timer
+from timer_decorator import timer
 from rons_tutorial_formatting import *
 
 print_block_separator()
@@ -24,17 +24,16 @@ start_block()
 def fibonacci_with_yield(index):
     a, b = 0, 1
 
-    for i in range(0, index):
+    for i in xrange(0, index):
         yield a
         a, b = b, a+b
 
 
 @timer
 def run_fibonnaci_with_yield():
-    global num
     ind = 1
-    for num in fibonacci_with_yield(20):
-        print "%d: %d" % (ind, num)
+    for num_with_yield in fibonacci_with_yield(2000):
+        print "%d: %d" % (ind, num_with_yield)
         ind += 1
 
 

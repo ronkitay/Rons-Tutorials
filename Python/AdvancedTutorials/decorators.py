@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 import time
 
-from AdvancedTutorials.timer_decorator import timer
+from timer_decorator import timer
 from rons_tutorial_formatting import *
 
 print_block_separator()

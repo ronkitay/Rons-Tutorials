@@ -2,6 +2,10 @@
 # -*- coding: utf-8 -*-
 # import math_stuff
 
+from rons_tutorial_formatting import *
+
+print_block_separator()
+
 num1 = 7 + 5
 print ("7 + 5 = %d (%s)" % (num1, type(num1)))
 num2 = 7 + 5.0
@@ -17,6 +21,10 @@ print ("7 * 5 = %d (%s)" % (num5, type(num5)))
 
 num6 = 7 * 5.0
 print ("7 * 5.0 = %9.3f (%s)" % (num6, type(num6)))
+
+end_block()
+
+start_block()
 
 print 7 * 5
 print 7 * 5.0

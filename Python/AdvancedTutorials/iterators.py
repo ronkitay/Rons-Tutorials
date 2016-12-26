@@ -1,6 +1,6 @@
 #!/usr/bin/python
 # -*- coding: utf-8 -*-
-from AdvancedTutorials.timer_decorator import timer
+from timer_decorator import timer
 from rons_tutorial_formatting import *
 
 
