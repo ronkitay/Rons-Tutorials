@@ -14,13 +14,18 @@ start_block('"Distributed" word count')
 def count_words(file_name, words, queue):
     print ("Searching for words in {}".format(file_name))
 
-    matched_words = []
+    matched_words = {}
+
     with open(file_name) as file:
         for line in file:
             for word in re.split(' ', line):
                 word = word.strip()
                 if word in words:
-                    matched_words.append(word)
+                    count = 1
+                    if word in matched_words:
+                        count = matched_words[word] + 1
+
+                    matched_words[word] = count
 
     queue.put((file_name, matched_words))
 
@@ -31,8 +36,8 @@ if __name__ == '__main__':
     words = Set()
     with open(word_file_name) as word_file:
         for line in word_file:
-            for word in re.split(' ', line):
-               words.add(word.strip())
+            for word in re.split('\b+', line):
+                words.add(word.strip())
 
     print ("Words in words file are: {}".format(words))
     processes = []

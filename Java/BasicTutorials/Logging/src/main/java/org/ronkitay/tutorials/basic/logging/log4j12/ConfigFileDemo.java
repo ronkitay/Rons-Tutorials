@@ -1,6 +1,8 @@
 package org.ronkitay.tutorials.basic.logging.log4j12;
 
 import java.io.File;
+import java.net.MalformedURLException;
+import java.net.URISyntaxException;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -91,6 +93,10 @@ public class ConfigFileDemo
 
 	private static String getRealPath(String log4jConfigPath)
 	{
-		return ConfigFileDemo.class.getClassLoader().getResource(log4jConfigPath).getPath();
+		try {
+			return ConfigFileDemo.class.getResource(log4jConfigPath).toURI().toURL().getFile();
+		} catch (Exception e) {
+			return "should not happen ...";
+		}
 	}
 }

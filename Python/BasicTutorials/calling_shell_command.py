@@ -1,12 +1,18 @@
 #!/usr/bin/python
-import subprocess
 
-# pshListOut=subprocess.Popen(["ls", "-la"], stdout=subprocess.PIPE)
-# out=subprocess.Popen(["grep", "r"], stdin=pshListOut.stdout, stdout=subprocess.PIPE)
-# pshListOut.stdout.close()
-# pshListOut.communicate()
-# out.communicate()
+from rons_tutorial_formatting import *
 
-mycmd=subprocess.getoutput('psh list | g P')
-print mycmd
+import subprocess as SP
 
+print_block_separator("SubProcess.call")
+
+SP.call(["ls", "-lart", "/"], shell=False)
+
+end_block()
+
+start_block("SubProcess.check_output")
+
+ls_la = SP.check_output(["ls", "-la"], shell=False)
+
+print (ls_la)
+end_block()

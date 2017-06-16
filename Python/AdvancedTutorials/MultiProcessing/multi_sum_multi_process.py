@@ -2,10 +2,10 @@
 # -*- coding: utf-8 -*-
 import sys
 
-from rons_tutorial_formatting import *
+# from rons_tutorial_formatting import *
 import multiprocessing as MP
 
-start_block('Multi sum')
+# start_block('Multi sum')
 
 
 def range_sum(start, end, queue):
@@ -44,4 +44,4 @@ if __name__ == '__main__':
     for p in processes:
         p.join()
 
-end_block()
+# end_block()
