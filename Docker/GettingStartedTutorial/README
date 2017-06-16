@@ -1,0 +1,12 @@
+List All: docker images
+Build: docker build -t friendlyhello .
+Run: docker run -d -p 4000:80 friendlyhello
+Test: curl http://localhost:4000/
+Tag: docker tag friendlyhello ronkitay/get-started:part1
+
+Swarm start: docker swarm init
+Deploy app on Stack: docker stack deploy -c docker-compose.yml getstartedlab
+List services for app on stack: docker stack services getstartedlab
+List containers for app on stack: docker stack ps getstartedlab
+
+Swarm end: docker swarm leave --force
