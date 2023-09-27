@@ -12,14 +12,14 @@ func factorial(number int) int {
 func main() {
 	fmt.Println(factorial(7))
 
-	var fibonnaci func(number int) int
+	var fibonacci func(number int) int
 
-	fibonnaci = func(number int) int {
+	fibonacci = func(number int) int {
 		if (number < 2) {
 			return number
 		}
-		return fibonnaci(number-1) + fibonnaci(number-2)
+		return fibonacci(number-1) + fibonacci(number-2)
 	}
 
-	fmt.Println(fibonnaci(7))
+	fmt.Println(fibonacci(7))
 }
