@@ -1,6 +1,25 @@
 go 1.21.1
 
 use (
-	./GoLang/GoByExample/21.Interfaces
-	./GoLang/GoByExample/19.Structs
+	./GoLang/GoByExample/01.HelloWorld/
+	./GoLang/GoByExample/02.Values/
+	./GoLang/GoByExample/03.Variables/
+	./GoLang/GoByExample/04.Constants/
+	./GoLang/GoByExample/05.For/
+	./GoLang/GoByExample/06.IfElse/
+	./GoLang/GoByExample/07.Switch/
+	./GoLang/GoByExample/08.Arrays/
+	./GoLang/GoByExample/09.Slices/
+	./GoLang/GoByExample/10.Maps/
+	./GoLang/GoByExample/11.Range/
+	./GoLang/GoByExample/12.Functions/
+	./GoLang/GoByExample/13.MultipleReturnValues/
+	./GoLang/GoByExample/14.VariadicFunctions/
+	./GoLang/GoByExample/15.Closures/
+	./GoLang/GoByExample/16.Recursion/
+	./GoLang/GoByExample/17.Pointers/
+	./GoLang/GoByExample/18.StringsAndRunes/
+	./GoLang/GoByExample/19.Structs/
+	./GoLang/GoByExample/20.Methods/
+	./GoLang/GoByExample/21.Interfaces/
 )
