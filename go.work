@@ -1,6 +1,6 @@
 go 1.21.1
 
 use (
-	./GoLang/GoByExample/Interfaces
-	./GoLang/GoByExample/Structs
+	./GoLang/GoByExample/21.Interfaces
+	./GoLang/GoByExample/19.Structs
 )
