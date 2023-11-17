@@ -22,4 +22,6 @@ use (
 	./GoLang/GoByExample/19.Structs/
 	./GoLang/GoByExample/20.Methods/
 	./GoLang/GoByExample/21.Interfaces/
+	./GoLang/GoByExample/22.StructEmbedding
+	./GoLang/GoByExample/23.Generics
 )
