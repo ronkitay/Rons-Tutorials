@@ -24,4 +24,7 @@ use (
 	./GoLang/GoByExample/21.Interfaces/
 	./GoLang/GoByExample/22.StructEmbedding
 	./GoLang/GoByExample/23.Generics
+	./GoLang/GoByExample/24.Errors
+	./GoLang/GoByExample/25.Goroutines
+	./GoLang/GoByExample/26.Channels
 )
