@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.ronkitay.Main'
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+test {
+    useJUnitPlatform()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.9.2'
+}
