@@ -1,0 +1,9 @@
+[transforms.my_filter]
+type = "filter"
+inputs = [ "my_demo_logs" ]
+condition = { type = "vrl", source = "starts_with!(.message, \"Line\") && !ends_with!(.message, \"1\")" }
+
+[transforms.my_transform]
+type = "remap"
+inputs = [ "my_filter" ]
+file = "/etc/vector/config/transform-code.vrl"

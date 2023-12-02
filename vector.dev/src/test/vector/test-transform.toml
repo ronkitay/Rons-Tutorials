@@ -1,0 +1,20 @@
+# ------------------------------------------------------------------------------------------------------------
+[[tests]]
+name = "test_transform_Extracts_Line_Number"
+
+[[tests.inputs]]
+insert_at = "my_transform"
+type = "log" 
+    [tests.inputs.log_fields]
+    message = "Line 57"
+
+[[tests.outputs]]
+extract_from = "my_transform"
+
+    [[tests.outputs.conditions]]
+    type = "vrl"
+    source = '''
+    assert_eq!(.line_number, "57") 
+    '''
+
+# ------------------------------------------------------------------------------------------------------------

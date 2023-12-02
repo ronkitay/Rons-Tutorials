@@ -1,0 +1,16 @@
+[sinks.my_console_sink]
+type = "console"
+inputs = [ "my_transform" ]
+target = "stdout"
+
+  [sinks.my_console_sink.encoding]
+  codec = "json"
+
+[sinks.my_blackhole_sink]
+type = "blackhole"
+inputs = [ "my_transform" ]
+
+[sinks.prometheus_exporter]
+type = "prometheus_exporter"
+inputs = [ "vector_metrics" ]
+address = "0.0.0.0:9090"

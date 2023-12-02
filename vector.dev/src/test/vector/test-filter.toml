@@ -1,0 +1,44 @@
+# ------------------------------------------------------------------------------------------------------------
+[[tests]]
+name = "test_filter__Not_A_Line__Records_is_Filtered"
+no_outputs_from = [ "my_filter" ]
+
+[[tests.inputs]]
+insert_at = "my_filter"
+type = "log" 
+    [tests.inputs.log_fields]
+    message = "Kuku"
+
+# ------------------------------------------------------------------------------------------------------------
+[[tests]]
+name = "test_filter__Line_1__Records_is_Filtered"
+no_outputs_from = [ "my_filter" ]
+
+[[tests.inputs]]
+insert_at = "my_filter"
+type = "log" 
+    [tests.inputs.log_fields]
+    message = "Line 1"
+
+# ------------------------------------------------------------------------------------------------------------
+
+[[tests]]
+name = "test_filter__Valid_Line__Records_is_Emitted"
+
+[[tests.inputs]]
+insert_at = "my_filter"
+type = "log" 
+    [tests.inputs.log_fields]
+    message = "Line 15"
+
+[[tests.outputs]]
+extract_from = "my_filter"
+
+    [[tests.outputs.conditions]]
+    type = "vrl"
+    source = '''
+    assert_eq!(.message, "Line 15") 
+    '''
+
+# ------------------------------------------------------------------------------------------------------------
+

@@ -1,0 +1,13 @@
+ARG VECTOR_VERSION=0.22.1-debian
+FROM timberio/vector:${VECTOR_VERSION} as Compile-And-Test
+
+RUN apt update -y && apt install curl -y
+
+ADD src/main/vector/* /etc/vector/config/
+ADD src/test/vector/* /etc/vector/config/tests/
+
+RUN vector test /etc/vector/config/*.toml /etc/vector/config/tests/*.toml
+
+RUN rm -rf /etc/vector/config/tests
+
+ENTRYPOINT ["/usr/bin/vector", "--config", "/etc/vector/config/*.toml"]
