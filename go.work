@@ -27,4 +27,7 @@ use (
 	./GoLang/GoByExample/24.Errors
 	./GoLang/GoByExample/25.Goroutines
 	./GoLang/GoByExample/26.Channels
+	./GoLang/GoByExample/27.ChannelBuffering
+	./GoLang/GoByExample/28.ChannelSynchronization
+	./GoLang/GoByExample/29.ChannelDirections
 )
