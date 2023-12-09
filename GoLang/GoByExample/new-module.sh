@@ -5,7 +5,7 @@ if [ $# -lt 1 ]; then
   exit 1
 fi
 
-MODULE_HUMAN_NAME=$(echo $* | tr -d ' ')
+MODULE_HUMAN_NAME=$(echo $* | tr -d ' -')
 MODULE_CODE_NAME=$(echo $* | tr ' ' '-' | tr 'A-Z' 'a-z')
 
 let next=$(fd -t d  | sort -n | tail -n 1 | cut -d '.' -f1)+1;

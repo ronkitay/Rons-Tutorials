@@ -30,4 +30,7 @@ use (
 	./GoLang/GoByExample/27.ChannelBuffering
 	./GoLang/GoByExample/28.ChannelSynchronization
 	./GoLang/GoByExample/29.ChannelDirections
+	./GoLang/GoByExample/30.Select
+	./GoLang/GoByExample/31.Timeouts
+	./GoLang/GoByExample/32.NonBlockingChannelOperations
 )
