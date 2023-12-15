@@ -33,4 +33,7 @@ use (
 	./GoLang/GoByExample/30.Select
 	./GoLang/GoByExample/31.Timeouts
 	./GoLang/GoByExample/32.NonBlockingChannelOperations
+	./GoLang/GoByExample/33.ClosingChannels
+	./GoLang/GoByExample/34.RangeOverChannels
+	./GoLang/GoByExample/35.Timers
 )
