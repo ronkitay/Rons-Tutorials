@@ -38,4 +38,5 @@ use (
 	./GoLang/GoByExample/35.Timers
 	./GoLang/GoByExample/36.Tickers
 	./GoLang/GoByExample/37.WorkerPools
+	./GoLang/GoByExample/38.WaitGroups
 )
