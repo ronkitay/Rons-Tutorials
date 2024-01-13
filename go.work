@@ -39,4 +39,6 @@ use (
 	./GoLang/GoByExample/36.Tickers
 	./GoLang/GoByExample/37.WorkerPools
 	./GoLang/GoByExample/38.WaitGroups
+	./GoLang/GoByExample/39.RateLimiting
+	./GoLang/GoByExample/40.AtomicCounters
 )
