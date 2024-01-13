@@ -1,9 +1,12 @@
 package main
 
+// SOURCE: https://gobyexample.com/atomic-counters
+
 import (
 	"fmt"
 	"sync"
 	"sync/atomic"
+	"time"
 )
 
 func main() {
@@ -22,6 +25,11 @@ func main() {
 
 			waitGroup.Done()
 		}()
+	}
+
+	for i := 0; i < 5; i++ {
+		time.Sleep(1 * time.Microsecond)
+		fmt.Println("Counter:", counter.Load())
 	}
 
 	waitGroup.Wait()
