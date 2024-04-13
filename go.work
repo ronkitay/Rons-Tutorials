@@ -41,4 +41,6 @@ use (
 	./GoLang/GoByExample/38.WaitGroups
 	./GoLang/GoByExample/39.RateLimiting
 	./GoLang/GoByExample/40.AtomicCounters
+	./GoLang/GoByExample/41.Mutexes
+	./GoLang/GoByExample/42.StatefulGoroutines
 )
