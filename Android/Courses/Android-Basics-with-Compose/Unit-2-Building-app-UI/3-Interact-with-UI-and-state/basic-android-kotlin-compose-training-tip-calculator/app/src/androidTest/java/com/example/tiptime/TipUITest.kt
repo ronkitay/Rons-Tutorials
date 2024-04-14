@@ -27,7 +27,7 @@ class TipUITest {
                 TipTimeLayout()
             }
         }
-        
+
         composeTestRule.onNodeWithText(billAmountString).performTextInput("10")
         composeTestRule.onNodeWithText(tipPercentageString).performTextInput("20")
 
