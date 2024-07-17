@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:batch="http://www.springframework.org/schema/batch"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+		http://www.springframework.org/schema/batch http://www.springframework.org/schema/batch/spring-batch-2.1.xsd">
+
+	<aop:aspectj-autoproxy/>
+
+	<bean name="benchmarking" class="com.rsa.springcourse.webstore.BenchmarkAspect"/>
+	
+ 	<bean name="catalog" class="com.rsa.springcourse.webstore.Catalog" init-method="loadItems">
+ 		<property name="itemDao" ref="itemDao"/>
+ 	</bean>
+ 	
+ 	<bean name="cart" class="com.rsa.springcourse.webstore.Cart" scope="prototype">
+ 		<property name="orderDao" ref="orderDao"/>
+ 	</bean>
+ 	
+ 	<bean name="orderDao" class="com.rsa.springcourse.webstore.dao.InMemoryOrderDao"/>
+	<bean name="itemDao" class="com.rsa.springcourse.webstore.dao.InMemoryItemDao"/>
+	
+</beans>
