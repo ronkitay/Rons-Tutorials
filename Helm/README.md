@@ -11,6 +11,7 @@ A helm Chart involves 3 basics:
 To check the chart - run this:
 
 ```shell
+cd chart
 helm template .
 ```
 
