@@ -1,0 +1,16 @@
+suite: Basic Test Suite
+templates:
+  - ./hello-world.yaml
+tests:
+  - it: Default values of Variable is populated in Template
+    asserts:
+      - equal:
+          path: hello.world
+          value: 'Hello World'
+  - it: Variable Override is populated in Template
+    set:
+      some.variable: 'Great Success'
+    asserts:
+      - equal:
+          path: hello.world
+          value: 'Great Success'

@@ -1,18 +1,13 @@
 #!/bin/sh
 
-HELM_UNITTEST_VERSION="3.7.1-0.2.8"
+HELM_UNITTEST_IMAGE="helmunittest/helm-unittest"
+HELM_UNITTEST_VERSION="3.17.2-0.8.1"
 
-# function setup() {
-#     echo "Downloading dependencies"
-#     helm dep update chart/tests/chart-integration-test
-# }
 
 function runTests() {
     echo "Running chart integration test"
-    docker run --rm -v $(pwd):/apps quintush/helm-unittest:$HELM_UNITTEST_VERSION chart/tests/chart-integration-test --debug --color
+    docker run --rm -v $(pwd):/apps ${HELM_UNITTEST_IMAGE}:${HELM_UNITTEST_VERSION} chart/ --debug --color
 }
-
-# setup
 
 if [[ "$1" == "--watch" ]]; 
 then
