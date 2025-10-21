@@ -11,11 +11,11 @@ import gc
 def foo():
     l = []
     l.append(l)
-    print l
+    print(l)
 
-print ("Garbage collector collected {} objects".format(gc.collect()))
+print("Garbage collector collected {} objects".format(gc.collect()))
 for i in range(10):
     foo()
-print ("Garbage collector collected {} objects".format(gc.collect()))
+print("Garbage collector collected {} objects".format(gc.collect()))
 
-print (gc.get_threshold())
+print(gc.get_threshold())
